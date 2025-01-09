@@ -1,10 +1,7 @@
-.tab {
-    display: inline-block;
-    margin-left: 40px;
-    }
 
 .tourTitle{
     text-align: center;
+    margin-top:20px;
 }
 
 #dates{
@@ -12,12 +9,71 @@
     margin-left:20px;
 }
 
-#list{
-    margin-left: 40px;
-    margin-left: 40px;
-    text-align: center;
-}
 
 #socials{
     margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left:30px;
 }
+
+h2 {
+    font-size: 20px;
+}
+
+.tour-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .tour-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .date {
+    font-weight: bold;
+    font-size: 18px;
+    flex: 1;
+  }
+
+  .location {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    flex: 2;
+  }
+
+  .tickets {
+    flex: 1;
+    text-align: right;
+  }
+
+  .tickets a {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: color 0.2s;
+  }
+
+  @media (max-width: 600px) {
+    .tour-date {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .date, .location, .tickets {
+      flex: none;
+      margin-bottom: 5px;
+    }
+
+    .tickets {
+      text-align: center;
+    }
+  }
