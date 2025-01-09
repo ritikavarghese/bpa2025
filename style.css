@@ -1,0 +1,54 @@
+.navbar {
+    background-color: rgb(0, 0, 0);
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 3px;
+  }
+  
+  .nav-link {
+    margin-right: 30px;
+  }
+  
+  .navWord::selection {
+    background-color: #A98952;
+    color: #000000;
+  }
+  
+  .navbar-brand {
+    color: white;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+  }
+
+  #spacing {
+    margin-left: 50px;
+    margin-right: 80px;
+  }
+  
+  .navbar a::after {
+    content: "";
+    background-color: #A98952;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.35s ease;
+  }
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  
