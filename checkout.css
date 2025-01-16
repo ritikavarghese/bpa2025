@@ -1,0 +1,37 @@
+/* Cart Sidebar Styles */
+.cart-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #333;
+    color: white;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 9999;
+  }
+  
+  .cart-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-sidebar-header h4 {
+    margin: 0;
+  }
+  
+  .cart-total {
+    margin-top: auto;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-sidebar {
+      width: 80%;
+    }
+  }
+  

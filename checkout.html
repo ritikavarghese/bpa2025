@@ -7,12 +7,33 @@
   <title>Merch</title>
   <!-- Bootstrap 5 CSS -->
   <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/checkout.css" rel="stylesheet"> 
 </head>
 <body class="bg-body-tertiary" onload="enterFiscalInfo();">
-<br><br><br><h1 class="text-center text-white">Checkout</h1>
+  <!-- Navbar with Cart Button -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Merch Store</a>
+      <button class="btn btn-outline-light" id="cart-btn" onclick="toggleCart()">🛒 Cart</button>
+    </div>
+  </nav>
 
-<div class="container pb-5">
-  <a href="index.html"><p>← Back to Shopping</p></a>
+  <!-- Cart Sidebar -->
+  <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h4>Your Cart</h4>
+      <button class="btn btn-danger" onclick="toggleCart()">Close</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <strong>Total: $<span id="cart-total"></span></strong>
+    </div>
+    <button class="btn btn-success" onclick="window.location.href='checkout.html'">Go to Checkout</button>
+  </div>
+
+  <!-- Page Content -->
+  <div class="container pb-5">
+    <a href="index.html"><p>← Back to Shopping</p></a>
     <br><br>
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
@@ -22,19 +43,12 @@
         </h4>
         <ul class="list-group mb-3">
           <div id="insert-items"></div>
-          <script src="js/checkoutitemC.js"></script>
+          <script src="/js/checkoutitemC.js"></script>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (USD)</span>
             <strong id="tot-price"></strong>
           </li>
         </ul>
-
-        <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
-          </div>
-        </form>
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Billing address</h4>
