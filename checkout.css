@@ -112,6 +112,9 @@ body {
   background-color: #45a049;
 }
 
+a::after {
+  color: white;
+}
 .checkout-button:active {
   background-color: #388E3C;
 }
