@@ -181,6 +181,16 @@ body {
     background-color: transparent; /* Remove background color on hover */
   }
   
+
+  h1 {
+
+    text-align: center;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch:narrower;
+  
+  }
   
   header nav ul {
     list-style: none;

@@ -116,6 +116,9 @@ body {
   transform: translateY(0);
 }
 
+a {
+  text-decoration: none;
+}
 .preorder-btn:hover {
   transform: translateY(-5px); 
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); 
