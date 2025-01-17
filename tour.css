@@ -3,19 +3,25 @@ header nav {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #333; /* Solid background */
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   display: flex;
   justify-content: center;
   padding: 1em;
   z-index: 1000;
-  box-shadow: 0 4px 2px -2px gray; /* Optional: Adds shadow for better separation */
 }
+
+
+nav ul li a:hover {
+  color: white; /* Change hover color to white */
+  background-color: transparent; /* Remove background color on hover */
+}
+
 
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 header nav ul li a {
@@ -23,8 +29,26 @@ header nav ul li a {
   color: white;
   font-family: 'Chakra Petch', sans-serif;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease; 
 }
 
+
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease; 
+}
+
+header nav ul li a:hover::after {
+  width: 100%; 
+}
 body {
   margin-top: 80px; /* Adjust depending on the height of your navbar */
   font-family: 'Raleway', serif;
@@ -45,22 +69,6 @@ body {
   color:white;
 }
 
-#dates {
-  display: inline-block;  
-  margin-right: 20px;   
-}
-
-
-@media screen and (min-width: 1300px) {
-  #dates {
-    margin-right: 10px;
-    margin-left: 200px;   
-  }
-
-  #dates + #dates {
-    margin-left: 10px;     
-  }
-}
 #socials {
   margin-top: 30px;
   margin-bottom: 30px;
