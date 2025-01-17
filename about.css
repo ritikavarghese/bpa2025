@@ -74,6 +74,10 @@ header nav ul li a:hover::after {
   border-radius: 0.5rem;
 }
 
+p {
+  text-align: left;
+}
+
 .album-section {
   position: relative;
   background-image: url('/pics/cloudBackground.jpg'); 
