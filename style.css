@@ -20,29 +20,29 @@ body {
 }
 
 .mainText {
-  font-size: 6rem; /* Adjust as needed */
+  font-size: 6rem; 
   font-weight: bold;
-  position: relative; /* Ensures the text can be moved */
-  top: -90px; /* Adjust this value to move the text up */
+  position: relative; 
+  top: -90px;
 }
 
 .slogan {
-  font-size: 1.5rem; /* Adjust as needed */
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 
 .slogan:first-of-type {
-  position: relative; /* Or absolute if needed */
-  left: 30%; /* Adjust this value to move it closer to the left */
+  position: relative;
+  left: 30%; 
   text-align: left;
-  top: -70px; /* Adjust this value to move it up */
+  top: -70px; 
 }
 
 
 .slogan:nth-of-type(2) {
   position: absolute;
   left: 80%;
-  top: 65%; /* Adjust this value to control spacing below "Collapse the Sky" */
+  top: 65%; 
   transform: translateY(-50%);
 }
 
@@ -52,19 +52,19 @@ body {
   text-align: left;
   letter-spacing: 0.5vh;
   font-size: 5vh;
-  position: absolute; /* Enable precise positioning */
-  left: 25%; /* Position it 1/4 (25%) from the left */
-  transform: translateX(-25%); /* Optional: Center-align the text within the 25% point */
-  text-align: center; /* Center-align text if it spans multiple lines */
-  color: white; /* Ensure visibility if background is dark */
-  font-size: 2rem; /* Adjust the size as needed */
+  position: absolute;
+  left: 25%; 
+  transform: translateX(-25%); 
+  text-align: center; 
+  color: white; 
+  font-size: 2rem; 
 }
 
-/* Preorder Button Styling */
+
 .preorder-btn {
   display: inline-block;
   background-color: black;
-  color: #f0f0f0; /* Slightly off-white for contrast */
+  color: #f0f0f0; 
   padding: 12px 30px;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 1.5rem;
@@ -74,19 +74,19 @@ body {
   text-decoration: none;
   border-radius: 5px;
   position: relative;
-  top: 10vh; /* Adjust this value to position it just below the slogan */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Floating effect */
+  top: 10vh; 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); 
   transition: all 0.3s ease;
   transform: translateY(0);
 }
 
 .preorder-btn:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Intensify the floating effect on hover */
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); 
 }
 
 .preorder-btn:active {
-  transform: translateY(2px); /* Add a subtle press effect */
+  transform: translateY(2px);
 }
 
   
@@ -318,7 +318,7 @@ hr {
 .cart-sidebar {
   position: fixed;
   top: 0;
-  right: -300px; /* Hidden by default */
+  right: -300px; 
   width: 300px;
   height: 100%;
   background-color: #fff;
@@ -358,33 +358,39 @@ hr {
   right: 0; 
 }
 
-#album {
-  padding: 20px;
-  background-color: #f4f4f4;
+.album-section {
+  position: relative;
+  background-image: url('./pics/IMG_4764.jpg'); 
+  background-position: center;
+  padding: 50px 0; 
+  color: white;
   text-align: center;
 }
 
-.carousel-container {
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 30px;
+  margin: 0 auto;
+  width: 80%; 
+  border-radius: 8px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  z-index: 2;
 }
 
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
+.album-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .album-item {
-  min-width: 300px;
-  margin: 0 10px;
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
   text-align: center;
-  background-color: white;
-  padding: 10px;
+  background-color: transparent; 
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .album-item img {
@@ -395,135 +401,21 @@ hr {
 
 .album-item p {
   margin-top: 10px;
-  font-size: 16px;
-  color: #333;
+  font-size: 18px;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 30px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.dots-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-.dot:hover {
-  background-color: #717171;
-}
-
-.active {
-  background-color: #717171;
-}
-
-#album {
-  padding: 20px;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.carousel-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.album-item {
-  min-width: 300px;
-  margin: 0 10px;
-  text-align: center;
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.album-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.album-item p {
+.preorder-btn-album {
   margin-top: 10px;
+  padding: 10px 20px;
   font-size: 16px;
-  color: #333;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #000000;
   color: white;
-  font-size: 30px;
   border: none;
-  padding: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transform: translateY(-50%);
+  transition: background-color 0.1s;
 }
 
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.dots-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-.dot:hover {
-  background-color: #717171;
+.preorder-btn:hover {
+  background-color: #2e2e2e;
 }
