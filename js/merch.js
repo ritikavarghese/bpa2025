@@ -1,73 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Attach event listeners to order buttons after the page loads
-    document.querySelectorAll('.order-btn').forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-
-            // Find the closest parent element (the card) and grab the item's name and price
-            const card = this.closest('.card');
-            const itemName = card.querySelector('.card-title').textContent;
-            const itemPrice = card.querySelector('.card-text').textContent.trim();
-
-            // Add the item to the cart
-            addToCart(itemName, itemPrice);
-        });
-    });
-
-    // Initialize cart UI
-    updateCartUI();
-});
-
-// Add item to the cart
-function addToCart(itemName, itemPrice) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Add new item to cart array
-    cart.push({ name: itemName, price: itemPrice });
-
-    // Save cart to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Update the cart UI and open the cart
-    updateCartUI();
-    openCart();
-}
-
-// Open and close cart
-function openCart() {
-    document.getElementById('cart-sidebar').classList.add('open');
-    document.getElementById('overlay').classList.add('active');
-}
-
-function closeCart() {
-    document.getElementById('cart-sidebar').classList.remove('open');
-    document.getElementById('overlay').classList.remove('active');
-}
-
-// Update cart UI
-function updateCartUI() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartItemsContainer = document.getElementById('cart-items');
-    cartItemsContainer.innerHTML = ''; // Clear current items in the cart
-
-    let total = 0;
-
-    // Loop through cart items and create rows
-    cart.forEach(item => {
-        const itemRow = document.createElement('tr');
-        itemRow.innerHTML = `
-            <td>${item.name}</td>
-            <td>${item.price}</td>
+document.addEventListener("DOMContentLoaded", function () {
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotalElement = document.getElementById("cart-total");
+    const orderButtons = document.querySelectorAll(".order-btn");
+  
+    // Load existing cart from local storage
+    const loadCart = () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      updateCartUI(cart);
+    };
+  
+    // Save cart to local storage
+    const saveCart = (cart) => {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    };
+  
+    // Update the cart UI
+    const updateCartUI = (cart) => {
+      cartItemsContainer.innerHTML = "";
+      let total = 0;
+  
+      cart.forEach((item) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>$${item.price}</td>
         `;
-        cartItemsContainer.appendChild(itemRow);
-        total += parseFloat(item.price.replace('$', ''));
+        cartItemsContainer.appendChild(row);
+        total += parseFloat(item.price);
+      });
+  
+      cartTotalElement.textContent = total.toFixed(2);
+    };
+  
+    // Add item to cart
+    const addItemToCart = (name, price) => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price });
+      saveCart(cart);
+      updateCartUI(cart);
+    };
+  
+    // Handle order button clicks
+    orderButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const name = button.getAttribute("data-name");
+        const price = button.getAttribute("data-price");
+        addItemToCart(name, price);
+        new bootstrap.Offcanvas(document.getElementById("offcanvasCart")).show();
+      });
     });
-
-    // Add total row to the cart
-    const totalRow = document.createElement('tr');
-    totalRow.innerHTML = `
-        <td><strong>Total</strong></td>
-        <td><strong>$${total.toFixed(2)}</strong></td>
-    `;
-    cartItemsContainer.appendChild(totalRow);
-}
+  
+    // Initialize cart on page load
+    loadCart();
+  });
+  

@@ -1,37 +1,117 @@
-/* Cart Sidebar Styles */
-.cart-sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 300px;
-    background-color: #333;
-    color: white;
-    display: none;
-    flex-direction: column;
-    padding: 10px;
-    z-index: 9999;
-  }
-  
-  .cart-sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .cart-sidebar-header h4 {
-    margin: 0;
-  }
-  
-  .cart-total {
-    margin-top: auto;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .cart-sidebar {
-      width: 80%;
-    }
-  }
-  
+body {
+  background-color: #121212;
+  color: #fff;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: none;
+}
+
+.form-control {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.form-control:focus {
+  background-color: #333;
+  box-shadow: none;
+}
+
+* {
+  color: #fff;
+}
+
+::-webkit-input-placeholder{
+  color: grey !important;
+}
+
+input.no-arrows::-webkit-outer-spin-button,
+input.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Yantramanav', sans-serif;
+  overflow-x: hidden;
+}
+
+.checkout-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-title {
+  font-family: 'Bebas Neue', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form label {
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 1rem;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus {
+  background-color: #333;
+  outline: none;
+}
+
+.checkout-summary {
+  margin-top: 20px;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.checkout-summary p {
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.checkout-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
+.checkout-button:active {
+  background-color: #388E3C;
+}
