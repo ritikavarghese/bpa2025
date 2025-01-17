@@ -266,4 +266,27 @@ header nav {
   .cart-sidebar.open {
     right: 0; 
   }
-    
+
+body{
+  background-color: #333;
+}
+
+.info{
+  color: white;
+  font-family: 'Yantramanav';
+  font-weight: bolder;
+}
+
+.btn:hover{
+  color:rgb(17, 5, 5);    
+  background-color: #c0c0c0;
+  border-color: #333;
+  transition-delay:.1s;
+}
+
+.btn{
+  background-color: #870000;
+  border-color: #9e0202;
+  border-width: 2px;
+  color:antiquewhite;
+}
