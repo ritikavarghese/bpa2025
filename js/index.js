@@ -16,22 +16,15 @@ document.getElementById("cart-button").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("cart-sidebar").classList.toggle("open");
 });
-
-function closeCart() {
-  document.getElementById("cart-sidebar").classList.remove("open");
+function openCart() {
+  document.getElementById('cart-sidebar').classList.add('open');
+  document.getElementById('overlay').style.display = 'block';
 }
 
-// Open the cart sidebar
-document.getElementById("cart-button").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("cart-sidebar").classList.add("open");
-});
-
-// Close the cart sidebar
 function closeCart() {
-  document.getElementById("cart-sidebar").classList.remove("open");
+  document.getElementById('cart-sidebar').classList.remove('open');
+  document.getElementById('overlay').style.display = 'none';
 }
-
 
 document.getElementById("cart-button").addEventListener("click", function (e) {
   e.preventDefault();
