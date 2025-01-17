@@ -48,3 +48,42 @@ document.getElementById('add-to-cart-button').addEventListener('click', function
 function proceedToCheckout() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }
+
+
+
+let currentIndex = 0;
+
+function moveSlide(step) {
+  const items = document.querySelectorAll('.album-item');
+  const totalItems = items.length;
+  currentIndex += step;
+
+  if (currentIndex >= totalItems) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = totalItems - 1;
+  }
+
+  updateCarousel();
+}
+
+function currentSlide(index) {
+  currentIndex = index - 1; // Adjust for 0-based index
+  updateCarousel();
+}
+
+function updateCarousel() {
+  const items = document.querySelectorAll('.album-item');
+  const dots = document.querySelectorAll('.dot');
+  
+  // Update carousel position
+  document.querySelector('.carousel').style.transform = `translateX(-${currentIndex * 320}px)`;
+
+  // Update dots
+  dots.forEach((dot, i) => {
+    dot.classList.remove('active');
+    if (i === currentIndex) {
+      dot.classList.add('active');
+    }
+  });
+}

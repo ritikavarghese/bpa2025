@@ -4,6 +4,92 @@ body {
   overflow-x: hidden;
 }
 
+.mainText {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch:narrower;
+  letter-spacing: 1vh;
+  font-size: 15vh;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+}
+
+.mainText {
+  font-size: 6rem; /* Adjust as needed */
+  font-weight: bold;
+  position: relative; /* Ensures the text can be moved */
+  top: -90px; /* Adjust this value to move the text up */
+}
+
+.slogan {
+  font-size: 1.5rem; /* Adjust as needed */
+  margin: 10px 0;
+}
+
+.slogan:first-of-type {
+  position: relative; /* Or absolute if needed */
+  left: 30%; /* Adjust this value to move it closer to the left */
+  text-align: left;
+  top: -70px; /* Adjust this value to move it up */
+}
+
+
+.slogan:nth-of-type(2) {
+  position: absolute;
+  left: 80%;
+  top: 65%; /* Adjust this value to control spacing below "Collapse the Sky" */
+  transform: translateY(-50%);
+}
+
+.slogan {
+  font-family: "Rubik Glitch", serif;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.5vh;
+  font-size: 5vh;
+  position: absolute; /* Enable precise positioning */
+  left: 25%; /* Position it 1/4 (25%) from the left */
+  transform: translateX(-25%); /* Optional: Center-align the text within the 25% point */
+  text-align: center; /* Center-align text if it spans multiple lines */
+  color: white; /* Ensure visibility if background is dark */
+  font-size: 2rem; /* Adjust the size as needed */
+}
+
+/* Preorder Button Styling */
+.preorder-btn {
+  display: inline-block;
+  background-color: black;
+  color: #f0f0f0; /* Slightly off-white for contrast */
+  padding: 12px 30px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  top: 10vh; /* Adjust this value to position it just below the slogan */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Floating effect */
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.preorder-btn:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Intensify the floating effect on hover */
+}
+
+.preorder-btn:active {
+  transform: translateY(2px); /* Add a subtle press effect */
+}
+
+  
 header nav {
   position: fixed;
   width: 100%;
@@ -102,6 +188,10 @@ img {
 }
 
 .tourTitle {
+  font-family: "Jura", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
   text-align: center;
   font-size: 3rem;
   color: white;
@@ -266,4 +356,178 @@ hr {
 
 .cart-sidebar.open {
   right: 0; 
+}
+
+#album {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.album-item {
+  min-width: 300px;
+  margin: 0 10px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+.active {
+  background-color: #717171;
+}
+
+#album {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.album-item {
+  min-width: 300px;
+  margin: 0 10px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+.active {
+  background-color: #717171;
 }

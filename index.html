@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garbage Band</title>
+    <title>Stage Fright- On Tour Now!</title>
+    
     <link rel="stylesheet" href="style.css">
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Chakra+Petch:wght@600&family=Yantramanav:wght@300&family=Nanum+Gothic&family=DM+Mono&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Metal+Mania&family=Prata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Jura:wght@300..700&family=Noto+Sans+Elymaic&family=Oxanium:wght@200..800&family=Parisienne&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Jura:wght@300..700&family=Nabla&family=Noto+Sans+Elymaic&family=Oxanium:wght@200..800&family=Parisienne&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Jura:wght@300..700&family=Nabla:EDPT@48&family=Noto+Sans+Elymaic&family=Oxanium:wght@200..800&family=Parisienne&family=Rubik+Glitch&family=Rubik+Lines&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Jura:wght@300..700&family=Noto+Sans+Elymaic&family=Oxanium:wght@200..800&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Noto+Sans+Elymaic&family=Oxanium:wght@200..800&family=Parisienne&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <header>
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/tour.html">Tour</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/merch.html">Merch</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/tour.html">TOUR</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/merch.html">MERCH</a></li>
+                <li><a href="/contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Stage Fright</h1>
-        <p>The official website of the band.</p>
+        <h1 class="mainText">STAGE FRIGHT</h1>
+        <p class="slogan">COLLAPSE <br> THE SKY.</p>
+        <p class="slogan">VELVET <br> STATIC.</p> 
+        <a href="#" class="preorder-btn">Pre-Order Now: <br>COLLAPSE THE SKY</a>
     </section>
 
     <section id="tour">
-        <h1 class="tourTitle">Our First World Tour</h1>
+        <h1 class="tourTitle">OUR FIRST WORLD TOUR</h1>
         <div class="tour-container">
             <div class="tour-date">
                 <div class="date-box">
@@ -224,6 +237,43 @@
             </div>
         </div>
     </section>
+    <section id="album">
+        <h2>Album</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="carousel">
+            <div class="album-item">
+              <img src="/pics/collapseTheSkyAlbumCover.jpg" alt="Album Image 1">
+              <p>Album Title 1</p>
+            </div>
+            <div class="album-item">
+              <img src="/pics/velvetStaticAlbumCover.jpg" alt="Album Image 2">
+              <p>Album Title 2</p>
+            </div>
+            <div class="album-item">
+              <img src="image3.jpg" alt="Album Image 3">
+              <p>Album Title 3</p>
+            </div>
+            <div class="album-item">
+                <img src="image3.jpg" alt="Album Image 3">
+                <p>Album Title 4</p>
+              </div>
+              <div class="album-item">
+                <img src="image3.jpg" alt="Album Image 3">
+                <p>Album Title 5</p>
+              </div>
+            <!-- Add more items as needed -->
+          </div>
+          <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <!-- Add more dots if needed -->
+        </div>
+      </section>
+      
     
 
     <footer id="socials">
@@ -240,5 +290,7 @@
     <script src="/index.js">
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
