@@ -407,47 +407,87 @@ hr {
 }
 
 
+#cart-button a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+#cart-button a i {
+  margin-right: 5px;
+}
+
+/* Sidebar */
 .cart-sidebar {
   position: fixed;
   top: 0;
-  right: -300px; 
+  right: -300px; /* Hidden by default */
   width: 300px;
   height: 100%;
-  background-color: #fff;
+  background-color: #222;
+  color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
   transition: right 0.3s ease-in-out;
   padding: 20px;
-}
-
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#cart-items {
-  margin-top: 20px;
-  overflow-y: auto;
-  max-height: 300px;
-}
-
-#cart-total {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#cart-icon {
-  cursor: pointer;
-}
-
-.cart-sidebar .btn {
-  margin-top: 20px;
-  width: 100%;
+  z-index: 1000;
 }
 
 .cart-sidebar.open {
-  right: 0; 
+  right: 0; /* Slide in */
+}
+
+/* Close Button */
+#close-cart {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Cart Items */
+#cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: block;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+#checkout-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.1em;
 }
 
 .album-section {
@@ -527,4 +567,63 @@ hr {
 .preorder-btn:hover {
   background-color: #2e2e2e;
   cursor: grab;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  /* Centers everything inside the footer */
+  height: 80px;  /* Keeps the footer compact */
+}
+
+#socials {
+  display: flex;
+  justify-content: flex-start;  /* Aligns the social media icons to the left */
+  width: 100%;  /* Ensures it takes up the full width */
+  padding-left: 20px;  /* Adds space from the left edge */
+  align-items: center;  /* Vertically centers the icons */
+}
+
+#socials h1 {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;  /* Ensures the icons are placed horizontally */
+  gap: 15px;  /* Adds space between the icons */
+  align-items: center;  /* Centers icons vertically */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer-message {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-copyright {
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-container p {
+  margin: 0;
+  padding: 0;
+}
+
+#socials img {
+  height: 50px;
+  width: 50px;
 }
