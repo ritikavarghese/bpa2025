@@ -1,81 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
 header nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 1rem;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
-
-header nav a.active {
-    background-color: #555;
-}
-
-main {
-    padding: 2rem;
-}
-
-.merch-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.merch-item {
-    text-align: center;
-    cursor: pointer;
-}
-
-.merch-item img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-#merch-popout {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #333; /* Solid background */
+    color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 1em;
     z-index: 1000;
-}
-
-.hidden {
-    display: none;
-}
-
-.popout-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
+    box-shadow: 0 4px 2px -2px gray; /* Optional: Adds shadow for better separation */
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: bold;
+  }
+  
+  body {
+    margin-top: 80px; /* Adjust depending on the height of your navbar */
+    font-family: 'Raleway', serif;
+    background-color:#121212;
+  }
+  
+  .tourTitle {
     text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-}
+    margin-top: 150px;
+    color:white;
+  }
+  
+  #dates {
+    font-size: 15px;
+    margin-left: 20px;
+    color:white;
+  }
+  
+  #socials {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    color:antiquewhite;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .tour-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .tour-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .date {
+    font-weight: bold;
+    font-size: 18px;
+    flex: 1;
+    color: white;
+  }
+  
+  .location {
+    font-size: 16px;
+    color: #cccccc;
+    text-align: center;
+    flex: 2;
+  }
+  
+  .tickets {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .tickets a {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  @media (max-width: 600px) {
+    .tour-date {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .date, .location, .tickets {
+      flex: none;
+      margin-bottom: 5px;
+    }
+  
+    .tickets {
+      text-align: center;
+      
+    }
+  }
+  
+  a {
+    font-size: 15px;
+    margin-left: 20px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  #dates:hover{
+    color:red;
+    transition-delay:.1s;
+  }
+  
+  .btn:hover{
+    color:rgb(17, 5, 5);    
+    background-color: #c0c0c0;
+    border-color: #333;
+    transition-delay:.1s;
+  }
+  
+  .btn{
+    background-color: #870000;
+    border-color: #9e0202;
+    border-width: 2px;
+    color:antiquewhite;
+  }
+  
+  #examples{
+    color:antiquewhite;
+    font-size: 15px;
+  }
+  
+  #examples:hover{
+    text-decoration: underline;
+  }
+  
+  #follow{
+    margin-left: 18px;
+  }
