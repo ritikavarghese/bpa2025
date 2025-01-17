@@ -1,4 +1,3 @@
-let currentIndex = 0;
 
 function moveSlide(step) {
   const items = document.querySelectorAll('.album-item');
