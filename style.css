@@ -103,10 +103,12 @@ header nav {
   z-index: 1000;
 }
 
+
+
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 header nav ul li a {
@@ -114,7 +116,25 @@ header nav ul li a {
   color: white;
   font-family: 'Chakra Petch', sans-serif;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease; 
 }
+
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease; 
+}
+
+header nav ul li a:hover::after {
+  width: 100%; 
+}
+
 
 .hero {
   background-image: url('./pics/IMG_4764.jpg');
@@ -147,6 +167,48 @@ img {
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+
+
+.tour-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: transparent;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease-out;
+  height: 120px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.tour-date {
+  opacity: 0;
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and slide-up */
+}
+
+.tour-date.visible {
+  opacity: 1;
+  transform: translateY(0); /* Final position */
+}
+
+.tour-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
   gap: 20px;
   z-index: 2;
   position: relative;
@@ -162,14 +224,32 @@ img {
   margin-left: 20px auto;
   align-items: center;
   background-color: transparent;
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease-out;
   height: 120px;
   padding: 10px;
   margin-bottom: 5px;
 }
 
+.tourTitle {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .tour-date {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+
+  .tour-date.visible {
+    opacity: 1;
+  }
+}
 .tour-date:nth-child(odd) .date-box {
   order: 1;
   margin-left: 20px;
@@ -188,7 +268,8 @@ img {
 }
 
 .tourTitle {
-  font-family: "Jura", serif;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
   font-optical-sizing: auto;
   font-style: normal;
 
@@ -303,6 +384,17 @@ hr {
     opacity: 1;
   }
 
+  .tour-dates {
+    opacity: 0;
+    transform: translateY(50px); /* Starts slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and slide-up */
+  }
+  
+  .tour-dates.visible {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+
   .location {
     flex-direction: column;
     align-items: flex-start;
@@ -360,10 +452,12 @@ hr {
 
 .album-section {
   position: relative;
-  background-image: url('./pics/IMG_4764.jpg'); 
+  background-image: url('/pics/cloudBackground.jpg'); 
   background-position: center;
+  background-size: cover;
   padding: 50px 0; 
   color: white;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -378,6 +472,8 @@ hr {
 }
 
 .album-title {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -405,17 +501,30 @@ hr {
 }
 
 .preorder-btn-album {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
+  display: inline-block;
+  background-color: black;
+  color: #f0f0f0; 
+  padding: 8px 15px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
   border: none;
+  text-align: center;
+  text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.1s;
+  position: relative;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); 
+  transition: all 0.3s ease;
+  transform: translateY(0);
 }
+
+.preorder-btn-album:hover {
+  background-color: #2e2e2e;
+  cursor: grab;
+}
+
 
 .preorder-btn:hover {
   background-color: #2e2e2e;
+  cursor: grab;
 }
