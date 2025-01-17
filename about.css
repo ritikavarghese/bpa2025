@@ -243,3 +243,17 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
+#examples{
+  color:antiquewhite;
+  font-size: 15px;
+}
+
+#examples:hover{
+  text-decoration: underline;
+}
+
+#follow{
+  margin-left: 18px;
+  font-family: 'Chakra Petch';
+}
