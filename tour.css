@@ -28,22 +28,26 @@ header nav ul li a {
 body {
   margin-top: 80px; /* Adjust depending on the height of your navbar */
   font-family: 'Raleway', serif;
+  background-color:#121212;
 }
 
 .tourTitle {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 150px;
+  color:white;
 }
 
 #dates {
   font-size: 15px;
   margin-left: 20px;
+  color:white;
 }
 
 #socials {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 30px;
+  color:antiquewhite;
 }
 
 h2 {
@@ -69,11 +73,12 @@ h2 {
   font-weight: bold;
   font-size: 18px;
   flex: 1;
+  color: white;
 }
 
 .location {
   font-size: 16px;
-  color: #555;
+  color: #cccccc;
   text-align: center;
   flex: 2;
 }
@@ -104,6 +109,7 @@ h2 {
 
   .tickets {
     text-align: center;
+    
   }
 }
 
@@ -114,3 +120,34 @@ a {
   text-decoration: none;
 }
 
+#dates:hover{
+  color:red;
+  transition-delay:.1s;
+}
+
+.btn:hover{
+  color:rgb(17, 5, 5);    
+  background-color: #c0c0c0;
+  border-color: #333;
+  transition-delay:.1s;
+}
+
+.btn{
+  background-color: #870000;
+  border-color: #9e0202;
+  border-width: 2px;
+  color:antiquewhite;
+}
+
+#examples{
+  color:antiquewhite;
+  font-size: 15px;
+}
+
+#examples:hover{
+  text-decoration: underline;
+}
+
+#follow{
+  margin-left: 18px;
+}
