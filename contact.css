@@ -290,3 +290,7 @@ body{
   border-width: 2px;
   color:antiquewhite;
 }
+
+#contactHeader{
+  margin-bottom: 70px;
+}
