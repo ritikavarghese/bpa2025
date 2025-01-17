@@ -168,6 +168,7 @@ a {
 #examples{
   color:antiquewhite;
   font-size: 15px;
+  text-align: left;
 }
 
 #examples:hover{
@@ -179,13 +180,13 @@ a {
 }
 
 footer {
-  background-color: #000000;
+  background-color: #121212;
   color: white;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: left;  
   height: 80px;  
 }
 
@@ -194,12 +195,12 @@ footer {
   justify-content: flex-start;  
   width: 100%; 
   padding-left: 20px;  
-  align-items: center;  
+  align-items: left;  
 }
 
 #socials h1 {
   margin-right: 20px;
-  font-size: 16px;
+  font-size: 35px;
 }
 
 .social-icons {
@@ -213,6 +214,7 @@ footer {
   margin: 0 auto;
   text-align: center;
   flex-grow: 1;
+  margin-bottom: 20px;
 }
 
 .footer-message {
@@ -245,4 +247,36 @@ a {
   text-align: center;
   text-decoration: none;
   color: white;
+}
+
+#examples{
+  color:antiquewhite;
+  font-size: 15px;
+}
+
+#examples:hover{
+  text-decoration: underline;
+}
+
+#follow{
+  margin-left: 18px;
+  font-family: 'Chakra Petch';
+}
+
+/* Make the links appear next to each other */
+#dates {
+  display: inline-block;  /* Ensures the links are inline */
+  margin-right: 20px;     /* Adds some space between the links */
+}
+
+/* Apply when the screen is larger than 768px (wide screens) */
+@media screen and (min-width: 1208px) {
+  #dates {
+    margin-right: 10px;    /* Reduce the space between links */
+    margin-left: 350px;
+  }
+
+  #dates + #dates {
+    margin-left: 10px;     /* Add some space between the links if needed */
+  }
 }
